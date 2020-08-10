@@ -6,13 +6,13 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath=moabdelhakim/capstone/testblueimage
+dockerpath=moabdelhakim/testblueimage
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login --username moabdelhakim
-docker tag testblueimage moabdelhakim/capstone/testblueimage
+docker tag testblueimage moabdelhakim/testblueimage
 # Step 3:
 # Push image to a docker repository
-docker push moabdelhakim/capstone/testblueimage
+docker push moabdelhakim/testblueimage
