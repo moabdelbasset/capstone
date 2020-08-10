@@ -1,6 +1,6 @@
 node {
-    def registry1 = 'moabdelhakim/capstone/capstone-blue'
-    def registry2 = 'moabdelhakim/capstone/capstone-green'
+    def registry1 = 'capstone/capstone-blue'
+    def registry2 = 'capstone/capstone-green'
     stage('Checking out git repo') {
       echo 'Checkout...'
       checkout scm
@@ -22,7 +22,7 @@ node {
 	     	sh "sudo docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword} "
 	     	sh "sudo docker build -t ${registry1} blue/."
 	     	sh "sudo docker tag ${registry1} ${registry1}"
-	     	sh "sudo docker push ${registry1}"
+	     	sh "sudo docker push moabdelhakim/testblueimage"
       }
     }
     stage('Building image green') {
